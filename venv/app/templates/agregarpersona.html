@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  </head>
+  <body>
+  	<form method="POST">
+  		<div>
+  			<p>Este usuario no está en la base de datos por favor agregalo</p>
+  		</div>
+  		<div>
+  		<input class="input" type="text" name="name" placeholder="nombre">
+  		<input class="input" type= "text" name="ape" placeholder="apellido">
+        <input id="nac" name="nac" type="date">
+        <input class="input" type="text" name="mail" placeholder="correo">
+        <input list="EPS" name="EPS" />
+        <datalist name="EPS" id="EPS">
+        	{% for i,n in EPS-%}
+
+        		<option value= {{i}} >{{n}}</option>
+        	{% endfor -%}	
+        </datalist>
+        <input class="input" type="text" name="tel" placeholder="telefono">
+        
+        
+
+        
+        
+        
+        <button type="submit" class="button is-success" name="alergias" placeholder="" value='1'>agregar
+                    </button>
+  		</div>
+  		<div>
+
+  		{% for i,n in alergias-%}
+           <input type="checkbox" name="alergia[]" value= {{i}} >{{n}}</option>
+        {% endfor -%}
+  		</div>
+  		<div>
+  			<button type="submit" class="button is-success" name="h" placeholder="" value='1'>
+  				hecho
+                    </button>
+            <button type="submit" class="button is-success" name="lo" placeholder="" value='1'>
+  				back
+                    </button>
+  		</div>
+  	</form>
+  </body>
+  </html>

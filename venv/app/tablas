@@ -1,0 +1,141 @@
+create table user (username varchar primary key,
+ password varchar,doc bigint,admin boolean);
+
+create table persona(documento bigint ,
+  tipo bigint,
+nombre varchar,
+  apellido varchar,
+  nacimiento date,
+  fallecimiento date,
+  mail varchar,
+  telefono varchar, PRIMARY KEY (documento,tipo));
+create table paciente(
+  id bigint ,
+  tipo bigint,
+  Eps bigint,
+  PRIMARY KEY (id,tipo)
+  );
+create table EPS(id bigint primary key,
+  nombre varchar,
+  tipo bigint);
+
+create table auxalergias (
+  id bigint primary key,
+  
+  alergias bigint
+);
+
+create table alergias (
+  id bigint primary key,
+  alergia varchar,
+  recomendaciones varchar,
+  descripcion varchar,
+  causas varchar
+);
+
+create table historia (
+  id bigint primary key,
+  pacid bigint,
+  tipo bigint,
+  medico bigint,
+  fecha date,
+  motivo varchar,
+  observaciones varchar,
+  talla bigint,
+  peso bigint,
+  medicaciones bigint ,
+  dieta bigint ,
+  enfermedades bigint ,
+  pregunta bigint ,
+  historialfamiliar varchar,
+  resultados bigint 
+
+);
+
+create table resultados(
+id bigint primary key,
+  colesterol bigint,
+  LDLcolesterol bigint, 
+  HDLcolesterol bigint,
+  glucosa bigint,
+  c_reactiva bigint,
+  HgA1c bigint
+
+);
+
+create table preguntas(
+id bigint,
+historia bigint,
+pregunta varchar,
+primary key (historia,id)
+
+);
+
+create table respuestas(
+id bigint primary key,
+  respuesta varchar,
+  pregunta bigint
+);
+
+create table auxenfermedades(
+id bigint primary key,
+  enfermedades bigint
+
+);
+
+create table enfermedades(
+ id bigint primary key,
+  nombre varchar,
+  descripcion varchar,
+  sbigintomas varchar
+);
+
+create table dieta(
+id bigint primary key,
+  recomendaciones varchar,
+  comidasrequeridas bigint,
+  evitarrequeridas bigint
+
+);
+create table evitar(
+  id bigint primary key,
+  comida bigint
+);
+create table requerida(
+  id bigint primary key,
+  comida bigint
+);
+create table comida(
+id bigint primary key,
+  nombre varchar
+);
+
+create table auxmedicacion(
+id bigint primary key,
+  veces bigint,
+  medicacion bigint
+);
+create table medicacion(
+id bigint primary key,
+  nombre varchar
+);
+
+create table medico(
+docid bigint primary key,
+  id bigint ,
+  espe bigint
+
+);
+
+create table auxesp(
+id bigint primary key,
+  
+  especialidades bigint
+
+);
+
+create table especialidad(
+  id bigint primary key,
+  especialidad varchar
+);
+

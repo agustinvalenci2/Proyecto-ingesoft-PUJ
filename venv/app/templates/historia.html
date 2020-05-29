@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  </head>
+  <body>
+  	<style> .third { width: 50%; float: left; } </style>
+  	  <div class="third">
+  	  	{% for l in lista1-%}
+  			<div>
+           		<p>{{l}}</p>
+       		</div>
+        {% endfor -%}
+  	  </div>
+	  <div class="third">
+  		{% for i,j in a-%}
+  			<div>
+           		<p>{{i}} :{{j}}</p>
+       		</div>
+        {% endfor -%}
+        {% for i in b-%}
+  			<div>
+           		<p>{{i}}</p>
+       		</div>
+        {% endfor -%}
+        {% for i in c-%}
+  			<div>
+           		<p>{{i}}</p>
+       		</div>
+        {% endfor -%}
+        {% for i in d-%}
+  			<div>
+           		<p>{{i}}</p>
+       		</div>
+        {% endfor -%}
+
+        {% for i,j in e-%}
+  			<div>
+           		<p>{{i}}:{{j}}</p>
+       		</div>
+        {% endfor -%}
+    </div>
+    <div>
+    	<p>comidas requeridas</p>
+    	<div>
+    		{% for i in re-%}
+    		<p> i</p>
+    		{% endfor -%}
+    	</div>
+
+    </div>
+    <div>
+    	<p>comidas evitada</p>
+    	<div>
+    		{% for i in ev-%}
+    		<p> i</p>
+    		{% endfor -%}
+    	</div>
+
+    </div>
+  </body>
+  </html>

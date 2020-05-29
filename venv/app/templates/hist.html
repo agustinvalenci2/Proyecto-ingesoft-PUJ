@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  </head>
+  <body>
+  	<form method="POST">
+     
+    <div>
+  	<button type="submit" class="button is-success" name="fa" placeholder="prueba" value="1">
+              marcar defuncion
+     </button>
+  	<button type="submit" class="button is-success" name="new" placeholder="prueba" value="1">
+              nueva historia
+     </button>
+  	<button type="submit" class="button is-success" name="lo" placeholder="prueba" value="1">
+                    back
+                  </button>
+  	<div class="row">
+  		<style> .third { width: 33.33%; float: left; } </style>
+	  <div class="third">
+	  	{% for m in medico %}
+	  		<p> {{m}}</p>
+	  	{% endfor %}
+	  </div>
+	  <div class="third">
+	  	{% for f in fechas %}
+	  		<p> {{f}}</p>
+	  	{% endfor %}
+	  </div>
+
+	  <div class="third">
+	  	{% for i in ids %}
+	  		<div>
+	  		<button type="submit" class="button is-success" name="his[]" placeholder="" value={{i}}>seleccionar
+                    
+            </button>
+        	</div>
+	  	{% endfor %}
+	  </div>
+  </div>
+	</div>
+	</form>
+  </body>
+
+  </div>
+  	
+  </html>

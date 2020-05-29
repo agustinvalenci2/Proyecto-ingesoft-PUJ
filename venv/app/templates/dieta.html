@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  </head>
+  <body>
+  	<form method="POST">
+  		<button type="submit" class="button is-success" name="lo" placeholder="" value='1'>atras </button>
+  		<input class="input" type="text" name="recomendaciones" placeholder="recomendaciones">
+  		<div>
+  		{% for i,n in C-%}
+           <input type="checkbox" name="requerida[]" value= {{i}} >{{n}}</option>
+        {% endfor -%}
+    </div>
+    <div>
+        {% for i,n in C-%}
+           <input type="checkbox" name="evitadas[]" value= {{i}} >{{n}}</option>
+        {% endfor -%}
+    </div>
+  	</form>
+  </body>
+  </html>

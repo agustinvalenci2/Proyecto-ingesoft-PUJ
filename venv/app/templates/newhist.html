@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  </head>
+  <body>
+    
+    <form method="POST">
+      <button type="submit" class="button is-success" name="lo" placeholder="" value='1'>atras </button>
+    {% if h==None -%}
+  	   
+  		
+  		<input class="input" type="text" name="motivo" placeholder="motivo">
+  		<input class="input" type="text" name="observaciones" placeholder="observaciones">
+  		<input class="input" type="number" name="medico" placeholder="documento medico">
+  		<input class="input" type="number" name="talla" placeholder="talla">
+  		<input class="input" type="number" name="peso" placeholder="peso">
+  		
+        <input list="die" name="dieta" />
+        <datalist name="die" id="die">
+        	{% for i,n in die-%}
+
+        		<option value= {{i}} >{{n}}</option>
+        	{% endfor -%}	
+        	<option value= "-1" >otro</option>
+        </datalist>
+
+        
+  		<input class="input" type="text" name="colesterol" placeholder="colesterol">
+  		<input class="input" type="number" name="LDHcolesterol" placeholder="LDHcolesterol">
+  		<input class="input" type="number" name="HDLcolesterol" placeholder="HDLcolesterol">
+  		<input class="input" type="number" name="gluco" placeholder="glucosa">
+  		<input class="input" type="number" name="c_reac" placeholder="C reactiva">
+  		<input class="input" type="number" name="HgA1c" placeholder="HgA1c">
+  		<input class="input" type="text" name="historial" placeholder="historial familiar">
+  		<div>
+      {% endif-%}
+
+      {% if h!=None -%}
+      <input class="input" type="text" name="motivo" placeholder="motivo" value={{h[0]}}>
+      <input class="input" type="text" name="observaciones" placeholder="observaciones" value={{h[1]}}>
+      <input class="input" type="number" name="medico" placeholder="documento medico" value={{h[2]}}>
+      <input class="input" type="number" name="talla" placeholder="talla" value={{h[3]}}>
+      <input class="input" type="number" name="peso" placeholder="peso" value={{h[4]}}>
+      
+        <input list="die" name="dieta"  value={{h[5]}}/>
+        <datalist name="die" id="die">
+          {% for i,n in die-%}
+
+            <option value= {{i}} >{{n}}</option>
+          {% endfor -%} 
+          <option value= "-1" >otro</option>
+        </datalist>
+
+        
+      <input class="input" type="text" name="colesterol" placeholder="colesterol" value={{h[6]}}>
+      <input class="input" type="number" name="LDHcolesterol" placeholder="LDHcolesterol" value={{h[7]}}>
+      <input class="input" type="number" name="HDLcolesterol" placeholder="HDLcolesterol" value={{h[8]}}>
+      <input class="input" type="number" name="gluco" placeholder="glucosa" value={{h[9]}}>
+      <input class="input" type="number" name="c_reac" placeholder="C reactiva" value={{h[10]}}>
+      <input class="input" type="number" name="HgA1c" placeholder="HgA1c" value={{h[11]}}>
+      <input class="input" type="text" name="historial" placeholder="historial familiar" value={{h[12]}}>
+      {% endif-%}
+  		{% for i,n in A-%}
+           <input type="checkbox" name="medicina[]" value= {{i}} >{{n}}</input>
+        {% endfor -%}
+        </div>
+        <div>
+        	{% for i,n in E-%}
+           <input type="checkbox" name="enfermedades[]" value= {{i}} >{{n}}</input>
+        {% endfor -%}
+
+    	</div>
+    	<div>
+
+  		
+  		</div>
+      <button type="submit" class="button is-success" name="preguntas" placeholder="" value='1'>preguntar </button>
+  		<button type="submit" class="button is-success" name="ok" placeholder="" value='1'>ok </button>
+  	</form>
+
+  </body>
+  </html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Profile Page</title>
+    
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  </head>
+  <body>
+    <form method="POST">
+    <section class="hero is-success is-fullheight">
+       <div>
+      <input id="sup" name="sup" type="date">
+      <input id="inf" name="inf" type="date">
+    </div>
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">
+            Hola {{g.user.username}}
+          </h1>
+          <h2 class="subtitle">
+            
+          </h2>
+          <p class="control">
+            <div class="control has-icons-left has-icons-right">
+            
+                  
+                  <input class="input" type="number" name="search" value={{nume}}>
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-user"></i>
+                  </span>
+                
+              </div>
+              <div>
+                <button type="submit" class="button is-success" name="bs" placeholder="prueba" value="1">
+                    busca
+                  </button>
+                  <select name="tipo" value={{tipoo}}>
+                  <option value=0>Cedula de ciudadania</option>
+                  <option value=1>tarjeta de identidad</option>
+                  <option value=2>cedula de extranjeria</option>
+                  </select>
+
+                  <button type="submit" class="button is-success" name="lo" placeholder="prueba" value="1">
+                    log out
+                  </button>
+              </div>
+              </form>
+                </p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
